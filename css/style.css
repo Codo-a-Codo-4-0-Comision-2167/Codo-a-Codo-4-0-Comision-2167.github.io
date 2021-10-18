@@ -1,0 +1,188 @@
+/* Esto es un comentario en CSS
+SELECTOR {
+    PROPIEDAD : 1233131
+    PROPIEDAD: "23e23px"
+}
+bgcolor="lightblue"
+*/
+
+/***************************************************/
+/*   Estilo del componente Player                  */
+/***************************************************/
+@import url(player.css);
+/***************************************************/
+/*   Estilo del componente Header                  */
+/***************************************************/
+@import url(header.css);
+/* @import url(testing.css); */
+
+/***************************************************/
+/*   Estilo del componente Musica Boton -          */
+/***************************************************/
+@keyframes cambiarColor {
+    from { background-color: red;}
+    to { background-color: yellow;}
+}
+
+.musicButton {
+    border-color: red;
+    /* Tuve que sobrescribir el estilo de a por mi class*/
+    border-style: none;
+    border-width: 2px;
+    /*transition: ease-out;
+    transition-duration: 5s;*/
+    animation-name: cambiarColor;
+    animation-duration: 5s;
+}
+
+.musicButton:hover {
+    background-color: red;
+    box-shadow: chartreuse;
+}
+
+.player {
+    color: black !important; /* Lo hice important porque el class item 4 de la grid tiene mas prioridad*/
+    /*position: absolute; 
+    bottom: 1%; 
+    left: 0px;*/
+    background-color: black;
+}
+
+/********************************************************/
+/*    Grid container CSS                            */
+/********************************************************/
+.item1 { 
+    grid-area: header;
+    border-color: black;
+    border-style: dotted; 
+}
+.item2 { 
+    grid-area: menu; 
+    border-color: black;
+    border-style: dotted;
+    
+}
+.item3 { 
+    grid-area: main; 
+    border-color: black;
+    border-style: dotted;
+}
+
+.item4 { 
+    grid-area: footer; 
+    border-color: black;
+    border-style: dotted; 
+    color: red;
+}
+
+.grid-container {
+    display: grid;
+    /* Intentamos duplicar el area de la derecha en comparacion con la del menu*/
+    grid-template-areas:
+      'menu header header '
+      'menu main main '
+      'footer footer footer ';
+    border-color: red;
+    border-style: solid;
+    background-color: #2196F3;
+    grid-gap: 0px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+
+/***************************************************/
+/*         Media queries, arranco por mobile         */
+/****************************************************/
+@media only screen and (max-width: 660px) {
+    
+    #listcontainer {
+        display: flex;
+        flex-direction: col;
+    }
+
+    .main_container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        justify-content: start;
+        align-items: auto;
+        align-content: start
+    }
+    
+    .item {
+        flex: 0 0 auto;
+        margin: 10px;
+    }
+
+    footer {
+        display: none;
+    }
+
+  }
+
+/***************************************************/
+/*   Estilo de la para Registrar                   */
+/***************************************************/
+/* CSS Desktop*/
+.body_register {
+    background-color: white;
+}
+
+.header_register { 
+    grid-area: header_register;
+    border-color: black;
+    border-style: dotted; 
+}
+
+.social_register { 
+    grid-area: social_register;
+    border-color: black;
+    border-style: dotted; 
+}
+
+.email_register { 
+    grid-area: email_register; 
+    border-color: black;
+    border-style: dotted;
+}
+
+.grid-container_register {
+    display: grid;
+     grid-template-areas:
+      'header_register header_register'
+      'social_register email_register'
+      'social_register email_register';
+    border-color: red; /* Lo uso durante desarrollo para verificar que cosa estoy cambiando*/
+    border-style: solid;
+    grid-gap: 0px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+/* CSS Common */
+
+/* CSS mobile*/
+@media only screen and (max-width: 500px) {
+
+    .grid-container_register {
+        display: grid;
+         grid-template-areas:
+          'header_register'
+          'social_register'
+          'email_register';
+        border-color: red; /* Lo uso durante desarrollo para verificar que cosa estoy cambiando*/
+        border-style: solid;
+        grid-gap: 0px;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+}
+

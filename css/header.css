@@ -1,0 +1,99 @@
+
+.header {
+    background: #282828;
+    padding: 10px;
+    color: #aaaaaa;
+    border-bottom: 1px solid #181818;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .header .page-flows .flow {
+    font-size: 20px;
+    color: #aaaaaa;
+    margin: 0 10px;
+  }
+  .header .page-flows .flow:hover {
+    color: white;
+  }
+  .header .page-flows .flow .disabled {
+    color: #5e5e5e;
+  }
+  .header .search {
+    margin-left: 1%;
+  }
+  .header .search input {
+    border-radius: 15px;
+    border: none;
+    background: white;
+    color: #181818;
+    padding-left: 30px;
+    outline: none;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/ios-search.svg);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: 5px;
+  }
+  .header .user {
+    width: 300px;
+    margin-left: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .user i {
+    font-size: 20px;
+  }
+  .header .user i:hover {
+    color: white;
+    cursor: pointer;
+  }
+  .header .user__info img {
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .header .user__actions button {
+    background: none;
+    border: none;
+  }
+  .header .user__actions .dropdown-menu {
+    background: #282828;
+    margin-top: 25px;
+    border-radius: 2px;
+    padding: 0;
+    border: none;
+  }
+  .header .user__actions .dropdown-menu:before {
+    font-family: "Ionicons";
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 7px;
+    color: #282828;
+    font-size: 36px;
+  }
+  .header .user__actions .dropdown-menu a {
+    color: #aaaaaa;
+    transition: all 0.2s ease;
+  }
+  .header .user__actions .dropdown-menu a:hover {
+    background: none;
+    transition: all 0.2s ease;
+  }
+  .header .user__actions .dropdown-menu li {
+    padding: 10px;
+    margin: 0;
+    transition: all 0.2s ease;
+  }
+  .header .user__actions .dropdown-menu li:hover {
+    background: #aaaaaa;
+    transition: all 0.2s ease;
+  }
+  .header .user__actions .dropdown-menu li:hover a {
+    color: #c8c8c8;
+    transition: all 0.2s ease;
+  }
+  

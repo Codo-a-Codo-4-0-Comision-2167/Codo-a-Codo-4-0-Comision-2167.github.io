@@ -1,0 +1,78 @@
+
+* {
+    font-size: x-large;
+    /*font-size: 2rem;*/
+    /*font-family: fantasy; /* En mi caso tengo esta font y la uso*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Toda la pagina siempre debe tener fondo negro */
+body {
+    background-color:black;
+}
+
+footer {
+    background-color:mediumorchid !important;
+    color: white;
+    font-family: 'Klee One', cursive;
+    position: absolute; 
+    bottom: 10%; 
+    left: 30px;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: white;
+    border-color: chartreuse;
+    border-style:dotted;
+    border-width: 10px;
+    /*background-color: black !important; Importante recordar que esto 
+    puede alterar elementos no deseados*/
+}
+
+/* Primer pseudo-clase*/
+a:hover {
+    background-color: white;
+}
+
+#iniciar {
+    color: white;
+}
+
+.whitebg {
+    background-color: white;
+    color: black;
+}
+
+body > table > tbody > tr {
+    background-color: black;
+    color: white;
+}
+
+/*body > table > tbody > tr > td:nth-child(2) > section > p {
+    background-color: black;
+    color: white;
+}*/
+
+ul, h2 {
+    color: white;
+}
+
+.fa-cloud {
+    color: red;
+}
+
+body > header > i.fas.fa-car {
+    scale: 120;
+}
+
+
+tr:nth-child(odd) > td {
+    padding-top: 50px;
+}
