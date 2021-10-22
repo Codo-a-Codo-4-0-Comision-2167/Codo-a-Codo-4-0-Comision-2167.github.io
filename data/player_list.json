@@ -1,0 +1,8 @@
+{
+    "message": "Hello World",
+    "otraData": "Bla bla",
+    "control_enabled": true,
+    "counter": 0,
+    "current_time": 0,
+    "total_time": 0
+}

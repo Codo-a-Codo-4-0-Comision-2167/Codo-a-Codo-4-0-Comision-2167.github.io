@@ -9,6 +9,10 @@
 </head>
 <body>
     <div id="vueJS">
+        <!--list></list>
+        <player></player-->
+        <controls></controls>
+        <img :src="message">
         <span v-if="control_enabled==true">
             {{ message }}
         </span>
@@ -22,9 +26,13 @@
             Ingrese Texto
             <input v-model="message" type="text">
         </label>
-        <button v-on:click=" counter +=1">+</button>
+        <button v-on:click=incrementCounter()>+</button>
         {{ counter }}
-        <button v-on:click=" counter -=1">-</button>
+        <button v-show="counter > 0" v-on:click="decreaseCounter()">-</button>
+        Total time: {{ total_time }}
+        Current time: {{ current_time }}
+        remaining time: {{ remainingTime }}
+        <input v-model="current_time" type="range" min=0 :max="total_time">
     </div>
     <div id="placeholder">
 
